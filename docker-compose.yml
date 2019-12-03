@@ -63,4 +63,4 @@ services:
       - redis
       - amq
       - filters
-      - mosesdecoder
+      # - mosesdecoder
