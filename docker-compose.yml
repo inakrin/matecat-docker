@@ -42,12 +42,12 @@ services:
         aliases:
           - mysql
 
-  mosesdecoder:
-    build: ./Moses/
-    expose:
-     - 8000
-    networks:
-     - matecat-network
+  # mosesdecoder:
+  #   build: ./Moses/
+  #   expose:
+  #    - 8000
+  #   networks:
+  #    - matecat-network
 
   matecat:
     build: ./MateCatApache/
