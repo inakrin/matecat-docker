@@ -30,12 +30,17 @@ services:
        - matecat-network
        
   mysql:
-    build: ./MySQL/
     container_name: docker_mysql
-    expose:
-     - 3306
+    image: mysql/mysql-server:5.7
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: matecat
+        MYSQL_USER: admin
+        MYSQL_PASSWORD: admin
     networks:
-       - matecat-network
+      matecat-network:
+        aliases:
+          - mysql
 
   mosesdecoder:
     build: ./Moses/
